@@ -8,15 +8,13 @@ public class Algorithm2 {
         int largestDistance = 0;
 
         for (int i=0; i<arr.length; i++) {
-            if (arr[i] % 2 == 0) {
                 for (int j=0; j<arr.length; j++) {
-                    if (arr[j] % 2 == 0) {
+                    if (arr[j] % 2 == 0 && arr[i] % 2 == 0) {
                         if (arr[i] - arr[j] > largestDistance) {
                             largestDistance = Math.abs(arr[i] - arr[j]);
                         }
                     }
                 }
-            }
         }
 
         return largestDistance;

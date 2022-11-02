@@ -2,6 +2,7 @@ package edu.miu.algorithms;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public class Algorithm1 {
 
@@ -22,9 +23,7 @@ public class Algorithm1 {
         for (int i=0; i<newlyArray.size(); i++) {
             for (int j=0; j<newlyArray.size(); j++) {
                 int currentDistance =  Math.abs(newlyArray.get(i) - newlyArray.get(j));
-                if (currentDistance > largestDistance) {
-                    largestDistance = currentDistance;
-                }
+                largestDistance = Math.max(currentDistance, largestDistance);
             }
         }
         return largestDistance;
