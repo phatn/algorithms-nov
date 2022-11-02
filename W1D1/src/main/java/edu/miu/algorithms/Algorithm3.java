@@ -27,7 +27,7 @@ public class Algorithm3 {
             long startTime = System.nanoTime();
             int largestDistance = algorithm3(arr);
             long endTime = System.nanoTime();
-            System.out.printf("The largest distance of array size %d is  %d, took %d ms", arr.length, largestDistance, (endTime - startTime)/1000000);
+            System.out.printf("The largest distance of array size %d is  %d, took %d nanosecond", arr.length, largestDistance, (endTime - startTime));
             System.out.println();
         }
     }
