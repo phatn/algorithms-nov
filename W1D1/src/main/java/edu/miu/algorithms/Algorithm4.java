@@ -6,8 +6,8 @@ public class Algorithm4 {
 
     //Use Streams to find the max and min. Compute max – min
     public static int algorithm4(int[] randomAry){
-        int max= Arrays.stream(randomAry).filter(x-> x%2 ==0).max().getAsInt();
-        int min=Arrays.stream(randomAry).filter(x->x%2==0).min().getAsInt();
+        int max= Arrays.stream(randomAry).filter(Utils::isEven).max().getAsInt();
+        int min=Arrays.stream(randomAry).filter(Utils::isEven).min().getAsInt();
 
         int maxDistance=max-min;
         return maxDistance;
@@ -20,7 +20,7 @@ public class Algorithm4 {
             long startTime = System.nanoTime();
             int largestDistance = algorithm4(arr);
             long endTime = System.nanoTime();
-            System.out.printf("The largest distance of array size %d is  %d, took %d ms", arr.length, largestDistance, (endTime - startTime)/1000000);
+            System.out.printf("The largest distance of array size %d is  %d, took %d nanosecond", arr.length, largestDistance, (endTime - startTime));
             System.out.println();
         }
     }

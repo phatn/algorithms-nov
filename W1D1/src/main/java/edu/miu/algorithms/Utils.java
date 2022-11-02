@@ -9,4 +9,8 @@ public class Utils {
         }
         return a;
     }
+
+    public static boolean isEven(int num) {
+        return num % 2 == 0;
+    }
 }
