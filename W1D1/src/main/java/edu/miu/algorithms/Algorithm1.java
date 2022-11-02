@@ -32,6 +32,14 @@ public class Algorithm1 {
 
     public static void main(String[] args) {
 
-        System.out.println(findLargestDistance(Utils.generateArray(3000)));
+        int[] sizes = {1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000};
+        for(int size : sizes) {
+            int[] a = Utils.generateArray(size);
+            long startTime = System.nanoTime();
+            int largestDistance = findLargestDistance(a);
+            long endTime = System.nanoTime();
+            System.out.printf("The largest distance of array size %d is  %d, took %d ms", a.length, largestDistance, (endTime - startTime)/1000000);
+            System.out.println();
+        }
     }
 }
