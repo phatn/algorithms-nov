@@ -46,7 +46,7 @@ public class Q1Algorithm1 {
 
         int[] sizes = {1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000};
         for(int size : sizes) {
-            int[] arr = Utils.generateArray(size, 10000);
+            int[] arr = Utils.generateArray(size, 1000);
             long startTime = System.nanoTime();
             int thirdLargestElement = findThirdLargest(arr);
             long endTime = System.nanoTime();
