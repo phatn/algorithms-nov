@@ -46,11 +46,11 @@ public class Q1Algorithm1 {
 
         int[] sizes = {1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000};
         for(int size : sizes) {
-            int[] arr = Utils.generateArray(size, 100);
+            int[] arr = Utils.generateArray(size, 10000);
             long startTime = System.nanoTime();
             int thirdLargestElement = findThirdLargest(arr);
             long endTime = System.nanoTime();
-            System.out.printf("The largest distance of array size %d is  %d, took %d nanosecond", arr.length, thirdLargestElement, (endTime - startTime));
+            System.out.printf("The third largest number of array size %d is  %d, took %d nanosecond", arr.length, thirdLargestElement, (endTime - startTime));
             System.out.println();
         }
     }
