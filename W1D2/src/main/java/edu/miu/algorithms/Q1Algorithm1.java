@@ -50,7 +50,7 @@ public class Q1Algorithm1 {
             long startTime = System.nanoTime();
             int thirdLargestElement = findThirdLargest(arr);
             long endTime = System.nanoTime();
-            System.out.printf("The largest distance of array size %d is  %d, took %d nanosecond", arr.length, thirdLargestElement, (endTime - startTime));
+            System.out.printf("The third largest number of array size %d is  %d, took %d nanosecond", arr.length, thirdLargestElement, (endTime - startTime));
             System.out.println();
         }
     }
