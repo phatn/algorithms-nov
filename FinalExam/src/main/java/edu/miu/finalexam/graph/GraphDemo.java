@@ -32,7 +32,11 @@ public class GraphDemo {
         g.BSF(0);
         System.out.println();
         Graph g1 = new Graph(B);
-        System.out.print("Components: ");
-        g1.getComponents();
+        System.out.print("DFS Components: ");
+        g1.getDFSComponents();
+
+        Graph g2 = new Graph(B);
+        System.out.print("BSF Components: ");
+        g2.getBFSComponents();
     }
 }

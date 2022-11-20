@@ -15,7 +15,7 @@ public class Graph {
         this.A = A;
     }
 
-    public void getComponents() {
+    public void getDFSComponents() {
         int len = A.length;
         boolean[] visited = new boolean[len];
         int[] components = new int[len];
@@ -23,6 +23,37 @@ public class Graph {
             DFSComponents(i, components, visited);
         }
         System.out.println(Arrays.toString(components));
+    }
+
+    public void getBFSComponents() {
+        int len = A.length;
+        boolean[] visited = new boolean[len];
+        int[] components = new int[len];
+        for(int i = 0; i < len; i++) {
+            BSFComponents(i, components, visited);
+        }
+        System.out.println(Arrays.toString(components));
+    }
+
+    private void BSFComponents(int source, int[] components, boolean[] visited) {
+        if(!visited[source]) {
+            count++;
+            int len = A.length;
+            Queue<Integer> queue = new ArrayDeque<>();
+            queue.add(source);
+            visited[source] = true;
+            components[source] = count;
+            while(!queue.isEmpty()) {
+                int v = queue.remove();
+                for(int i = 0; i < len; i++) {
+                    if(A[v][i] == 1 && !visited[i]) {
+                        queue.add(i);
+                        visited[i] = true;
+                        components[i] = count;
+                    }
+                }
+            }
+        }
     }
 
     private void DFSComponents(int source, int[] components, boolean[] visited) {
@@ -95,4 +126,5 @@ public class Graph {
             }
         }
     }
+
 }
