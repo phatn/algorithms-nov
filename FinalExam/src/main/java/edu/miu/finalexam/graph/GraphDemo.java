@@ -1,6 +1,7 @@
 package edu.miu.finalexam.graph;
 
 
+
 public class GraphDemo {
 
     public static void main(String[] args) {
@@ -25,6 +26,28 @@ public class GraphDemo {
 
         };
 
+        int[][] C = {
+                {0, 1, 1, 0, 0, 0},
+                {1, 0, 1, 1, 0, 0},
+                {1, 1, 0, 0, 1, 0},
+                {0, 1, 0, 0, 1, 1},
+                {0, 0, 1, 1, 0, 1},
+                {0, 0, 0, 1, 1, 0}
+        };
+
+        int[][] D = {
+                {0, 1, 1, 0, 0, 0, 0, 0, 0, 0},
+                {1, 0, 1, 0, 0, 0, 0, 0, 0, 0},
+                {1, 1, 0, 0, 0, 0, 0, 0, 0, 0},
+                {0, 0, 0, 0, 1, 0, 0, 0, 0, 0},
+                {0, 0, 0, 1, 0, 0, 0, 0, 0, 0},
+                {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+                {0, 0, 0, 0, 0, 0, 0, 1, 0, 1},
+                {0, 0, 0, 0, 0, 0, 1, 0, 1, 1},
+                {0, 0, 0, 0, 0, 0, 0, 1, 0, 1},
+                {0, 0, 0, 0, 0, 0, 1, 1, 1, 0}
+        };
+
         Graph g = new Graph(A);
         System.out.print("DSF: ");
         g.DFS(0);
@@ -38,5 +61,9 @@ public class GraphDemo {
         Graph g2 = new Graph(B);
         System.out.print("BSF Components: ");
         g2.getBFSComponents();
+
+        Graph g4 = new Graph(D);
+        System.out.print("BSF Components: ");
+        g4.getBFSComponents();
     }
 }
